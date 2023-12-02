@@ -48,8 +48,8 @@
 }
 @media (max-width:490px) {
     #title h2{
-        padding: 0px;
-        font-size: 21px;
+        padding-bottom: 4px;
+        font-size: 26px;
         font-weight: 600;
     }
 }
@@ -163,11 +163,42 @@ header{
     width: 50%;
     height: 600px;
 }
+#graphic>svg{
+    position: absolute;
+    z-index: 99;
+}
+#html{
+    width: 120px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#html img{
+    width: 100%;
+}
+#idea{
+    width: 130px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#idea img{
+    width: 100%;
+}
+#mortarboard{
+    width: 120px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+#mortarboard img{
+    width: 100%;
+}
 /* Responsive Heading Section  */
 @media (max-width:1024px) {
     header{
         height: 50vw;
-        padding: 0px 15px 0px 15px;
+        padding: 0px 15px 20px 15px;
     }
     #intro{
         height: 25vw;
@@ -175,6 +206,83 @@ header{
     #text h1{
         font-size: 4vw;
         line-height: 4.8vw;
+    }
+    #html{
+        width: 60px;
+        top: 19%;
+        left: -5%;
+    }
+    #idea{
+        width: 70px;
+        top: 19%;
+    }
+    #mortarboard{
+        width: 80px;
+        bottom: 14%;
+    }
+
+}
+@media (max-width:765px) {
+    #html{
+        width: 50px;
+        top: 30%;
+        left: -6%;
+    }
+    #idea{
+        width: 50px;
+        top: 30%;
+        right: 0;
+    }
+    #mortarboard{
+        width: 50px;
+        bottom: 30%;
+        left: -10%;
+    }
+    #mortarboard img{
+        width: 100%;
+    }
+}
+@media (max-width:425px) {
+    header{
+        justify-content: right;
+        padding-top: 20px;
+        flex-wrap: wrap;
+        height: fit-content;
+    }
+    #intro{
+        width: 100%;
+        height: 31vw;
+    }
+    #text h1{
+        font-size: 5.8vw;
+        line-height: 6.5vw;
+    }
+    #graphic{
+        height: fit-content;
+        padding-top: 30px;
+    }
+    #graphic>svg{
+        position: relative;
+        z-index: 99;
+    }
+    #html{
+        width: 40px;
+        position: absolute;
+        top: 20px;
+        left: -18px;
+    }
+    #idea{
+        width: 50px;
+        position: absolute;
+        top: 20px;
+        right: -10px;
+    }
+
+    #mortarboard{
+        width: 50px;
+        position: absolute;
+        bottom: 0;
+        left: -15%;
     }
 }
 
@@ -363,6 +471,23 @@ header{
         width: 150px;
     }
 }
+@media (max-width:768px) {
+    #company{
+        padding: 28px 15px;
+    }
+    #company_container img{
+        width: 100px;
+    }
+}
+@media (max-width:425px) {
+    #company_container{
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+    #company_container img{
+        width: 80px;
+    }
+}
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  */
 /* review section  */
 #review{
@@ -473,6 +598,9 @@ header{
 #wrapper{
     display: flex;
     gap: 10px;
+}
+.more-link{
+    border-bottom: 1.6px solid #06AC8B;
 }
 /* Responsive Blogs  */
 @media (max-width:1024px) {
