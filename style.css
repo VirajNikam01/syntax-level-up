@@ -30,6 +30,13 @@
     .btn{
         padding: 8px 18px ;
         font-size: 1.8vw;
+        height: fit-content;
+      }
+}
+@media (max-width:425px) {
+    .btn{
+        padding: 8px 18px ;
+        font-size: 2.5vw;
       }
 }
 /* +++++++++++++++++++++++++++++++++++++++++++++  */
@@ -106,6 +113,16 @@ nav{
     font-weight: 600 !important;
     color: #021BFF !important;
 }
+.mobile-navbar-btn{
+    cursor: pointer;
+    display: none;
+}
+.mobile-nav-icon{
+    font-size: 29px;
+}
+.fa-xmark{
+    display: none;
+}
 
 /* responsive for navbar  */
 @media (max-width: 1024px) {
@@ -125,6 +142,60 @@ nav{
     .active{
         font-weight: 600 !important;
         color: #021BFF !important;
+    }
+}
+@media (max-width:726px) {
+    nav{
+        position: relative;
+    }
+    #frame161{
+        z-index: 99999;
+    }
+    #frame169{
+        flex-direction: column;
+        justify-content: space-evenly; 
+    }
+    #frame169 li a{
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .mobile-navbar-btn{
+        display: block;
+        z-index: 99999;
+    }
+    #frame163{
+        /* display: none; */
+        width: 100%;
+        height: 100vh;
+        background-color: #dadada;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 130px;
+        padding-top: 100px;
+        transform: translateX(100%);
+        transition: all 0.5s linear;
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+    .active #frame163{
+        transform: translateX(0%);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+    }
+    .active .mobile-navbar-btn .fa-bars{
+        display: none;
+    }
+    .active .fa-xmark{
+        display: block;
     }
 }
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++  */
@@ -245,17 +316,17 @@ header{
 @media (max-width:425px) {
     header{
         justify-content: right;
-        padding-top: 20px;
+        padding-top: 6px;
         flex-wrap: wrap;
         height: fit-content;
     }
     #intro{
         width: 100%;
-        height: 31vw;
+        height: 35vw;
     }
     #text h1{
         font-size: 5.8vw;
-        line-height: 6.5vw;
+        line-height: 7vw;
     }
     #graphic{
         height: fit-content;
@@ -494,7 +565,7 @@ header{
     height: 587px;
     width: 100%;
     padding: 40px 100px 40px 100px;
-    background-color: red;
+    background-color: #008E85;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -611,6 +682,7 @@ header{
     #blogContent{
         justify-content: space-evenly;
         flex-wrap: wrap;
+        padding-bottom: 20px;
     }
     #blogCard1{
         min-width: 380px;
@@ -662,3 +734,186 @@ header{
     }
 }
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++  */
+/* Counts Section  */
+#counts{
+    height: 230px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 24px;
+    /* background-color: red; */
+}
+#countIteam{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    width: 210px;
+    height: 133px;
+    border-radius: 20px 0px 20px 0px;
+    font-weight: 600;
+}
+#countIteam::after{
+    content: "";
+    width: 100%;
+    height: 130%;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    z-index: -1;
+    border-radius: 20px 0px 20px 0px;
+}
+.aftColor1{
+    background-color: #FFD5DF;
+    border: 1px solid #FF537D;
+}
+.aftColor2{
+    background-color: #BFF5F2;
+    border: 1px solid #008E85;
+}
+.aftColor3{
+    background-color: #DFCEFB;
+    border: 1px solid #8B45FF;
+}
+.aftColor4{
+    background-color: #FFF5D1;
+    border: 1px solid #FFC900;
+}
+/* Responsive count section  */
+@media (max-width:640px) {
+    #counts{
+        flex-wrap: wrap;
+        height: fit-content;
+    }
+    #countIteam{
+        min-width: 150px;
+    }
+}
+@media (max-width:400px) {
+    #countIteam{
+        width: 100%;
+    }
+}
+/* ++++++++++++++++++++++++++++++++++++++++++  */
+/* Contact Section  */
+#contact{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 48px 100px 48px 100px;
+    /* background-color: rebeccapurple; */
+}
+#Contact-details{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 678px;
+    height: 457px;
+    /* background-color: #021BFF; */
+}
+#bottom{
+    padding-left: 50px;
+}
+#center p{
+    color: #1B1C1EB2;
+    font-size: 24px;
+    font-weight: 600;
+}
+#bottom li{
+    padding-block: 8px;
+    font-weight: 600;
+    font-size: 24px;
+}
+#Contact-form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 515px;
+    /* height: 664px; */
+    /* background-color: aqua; */
+}
+.inputBox{
+    border: 1px solid #808080;
+    width: 387px;
+    padding: 8px 12px 8px 12px;
+    background-color: transparent;
+    border-radius: 10px;
+    margin-top: 7px;
+}
+.inputBox input{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding-inline: 8px;
+    width: 90%;
+}
+input::placeholder{
+    font-size: 16px;
+}
+.form-field label{
+    font-weight: 400;
+    font-size: 20px;
+    color: #000000;
+}
+.formbtn{
+    margin-top: 25px;
+}
+@media (max-width:1024px) {
+    #contact{
+        flex-wrap: wrap;
+        gap: 50px;
+        padding: 48px 15px;
+    }
+    .formbtn{
+        margin-top: 18px;
+        font-size: 16px;
+    }
+}
+@media (max-width:425px) {
+    #Contact-details{
+        width: 100%;
+        height:fit-content;
+    }
+    #center p{
+        font-size: 18px;
+        padding-block: 20px;
+    }
+    #bottom{
+        padding-left: 20px;
+    }
+    #bottom li{
+        padding-block: 4px;
+        font-size: 18px;
+    }
+    #top h1{
+        font-size: 28px;
+    }
+    #top h2{
+        font-size: 20px;
+    }
+    #Contact-form{
+        width: 100%;
+    }
+    .inputBox{
+        width: 100%;
+    }
+    .inputBox input{
+        max-width: 80%;
+    }
+    input::placeholder{
+        font-size: 14px;
+    }
+    .form-field label{
+        font-size: 18px;
+    }
+    .formbtn{
+        margin-top: 18px;
+    }
+}
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++  */
+
