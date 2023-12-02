@@ -33,7 +33,26 @@
       }
 }
 /* +++++++++++++++++++++++++++++++++++++++++++++  */
-
+/* title h2  */
+#title h2{
+    padding: 10px;
+    font-weight: 590;
+    font-size: 36px;
+}
+/* Responsive Title  */
+@media (max-width:768px) {
+    #title h2{
+        padding: 3px;
+        font-size: 30px;
+    }
+}
+@media (max-width:490px) {
+    #title h2{
+        padding: 0px;
+        font-size: 21px;
+        font-weight: 600;
+    }
+}
 *{
     margin: 0;
     padding: 0;
@@ -171,11 +190,6 @@ header{
     width: 100%;
     padding: 40px 50px 40px 50px;
 }
-#title h2{
-    padding: 10px;
-    font-weight: 590;
-    font-size: 36px;
-}
 #content{
     height: 218px;
     width: 100%;
@@ -199,14 +213,9 @@ header{
 /* Responsive explore section  */
 @media (max-width:1024px) {
     #explore{
-        height: 400px;
         width: 100%;
         padding: 30px 15px;
         height: fit-content;
-    }
-    #title h2{
-        padding: 5px;
-        font-size: 29px;
     }
     #content{
         height: fit-content;
@@ -219,6 +228,36 @@ header{
     }
     #content .elem p{
         font-size: 17px;
+    }
+}
+@media (max-width:768px) {
+    #explore{
+        padding: 30px 15px 5px 15px;
+    }
+    #content{
+        height: fit-content;
+        padding: 30px 0px 40px 0px;
+    }
+    #content .elem img{
+        width: 50px;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+    #content .elem p{
+        font-size: 13px;
+    }
+}
+@media (max-width:425px) {
+    #content{
+        padding: 19px 0px;
+    }
+    #content .elem img{
+        width: 40px;
+        height: 40px;
+        margin-bottom: 5px;
+    }
+    #content .elem p{
+        font-size: 10px;
     }
 }
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++  */
@@ -267,6 +306,7 @@ header{
 #Course-details p{
     font-size: 14px;
     font-weight: 400;
+    color:#1B1C1ECC;
 }
 #Course-addon{
     display: flex;
@@ -310,6 +350,187 @@ header{
 #company_container{
     width: 100%;
     display: flex;
-   gap: 46px;
+    justify-content: space-between;
     align-items: center;
 }
+/* Responsive of Company  */
+@media (max-width:1027px) {
+    #company{
+        padding: 38px 15px 38px 15px;
+        /* background-color: red; */
+    }
+    #company_container img{
+        width: 150px;
+    }
+}
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  */
+/* review section  */
+#review{
+    height: 587px;
+    width: 100%;
+    padding: 40px 100px 40px 100px;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++  */
+/* Blog Section  */
+#blog{
+    height: 835px;
+    width: 100%;
+    padding: 48px 100px 48px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #06AC8B; */
+}
+#blogContent{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: antiquewhite; */
+}
+#blogCard1 img{
+    width: 100%;
+    border-radius: 8px;
+}
+#blogCard1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 522px;
+    width: 42%;
+    border: 1px solid #021BFF26;
+    box-shadow: 0px 4px 40px 0px #021BFF0D;
+    padding: 24px 32px 24px 32px;
+    border-radius: 10px;
+
+}
+#blogCard2{
+    min-height: 522px;
+    height: fit-content;
+    width: 57%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+
+}
+#card2Blog{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 230px;
+    height: fit-content;
+    padding: 20px 24px 20px 24px;
+    border-radius: 8px;
+    border: 1px solid #021BFF26;
+}
+#card2Blog img{
+    height: 50%;
+    border-radius: 8px;
+}
+#blogTitle{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#blogTitle #text{
+    padding: 4px 10px 4px 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+}
+#blogTitle #date{
+    font-weight: 600;
+    font-size: 16px;
+    color: #021BFF;
+    text-align: center;
+}
+#blogContent h2{
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+#blogContent p{
+    font-size: 14px;
+    color: #121212CC;
+}
+#blogContent .more{
+    margin-top: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #06AC8B;
+}
+#wrapper{
+    display: flex;
+    gap: 10px;
+}
+/* Responsive Blogs  */
+@media (max-width:1024px) {
+    #blog{
+        height: fit-content;
+        padding: 48px 15px ;
+    }
+    #blogContent{
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    #blogCard1{
+        min-width: 380px;
+        padding: 15px 20px;
+    }
+    #blogCard2{
+        min-height: 522px;
+        height: fit-content;
+        max-width: 490px;
+    }
+    #card2Blog{
+        min-height: 230px;
+        height: fit-content;
+        padding: 15px 20px;
+    }
+}
+@media (max-width:900px) {
+    #blogCard1{
+        min-width: 100%;
+        height: fit-content;
+        margin-bottom: 10px;
+    }
+    #blogCard2{
+        min-height: 522px;
+        height: fit-content;
+        max-width: 100%;
+        width: 100%;
+        gap: 0px;
+    }
+    #card2Blog{
+        min-height: 230px;
+        width: 100%;
+        height: fit-content;
+    }
+}
+@media (max-width:425px) {
+    #card2Blog{
+        margin-block: 10px;
+    }
+    #card2Blog img{
+        height: 50%;
+        width: 100%;
+    }
+    #blogTitle{
+        padding-block: 10px;
+    }
+    #wrapper{
+        flex-direction: column;
+    }
+}
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++  */
