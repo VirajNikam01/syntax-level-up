@@ -73,9 +73,15 @@ main{
     max-width: 1440px;
     width: 100%;
     margin-inline: auto;
-    height: 5908px;
     overflow-x: hidden;
     font-family: "Open sans";
+}
+body::-webkit-scrollbar{
+    width: 10px;
+    background-color: transparent;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #021BFF;
 }
 nav{
     width: 100%;
@@ -177,7 +183,6 @@ nav{
         align-items: center;
         flex-direction: column;
         gap: 130px;
-        padding-top: 100px;
         transform: translateX(100%);
         transition: all 0.5s linear;
 
@@ -719,6 +724,9 @@ header{
     }
 }
 @media (max-width:425px) {
+    #blogContent{
+       padding-top: 20px;
+    }
     #card2Blog{
         margin-block: 10px;
     }
@@ -792,7 +800,7 @@ header{
         min-width: 150px;
     }
 }
-@media (max-width:400px) {
+@media (max-width:425px) {
     #countIteam{
         width: 100%;
     }
@@ -897,13 +905,17 @@ input::placeholder{
         font-size: 20px;
     }
     #Contact-form{
+        align-items: start;
         width: 100%;
+        /* background-color: #021BFF; */
     }
     .inputBox{
-        width: 100%;
+        width: 120%;
+        /* background-color: #008E85; */
     }
     .inputBox input{
         max-width: 80%;
+        /* background-color: #FFC900; */
     }
     input::placeholder{
         font-size: 14px;
@@ -916,4 +928,192 @@ input::placeholder{
     }
 }
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++  */
+/* Subscribe Section  */
+#subscribe{
+    min-height: 510px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 26px 34px;
+}
+#subscribe_card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 430px;
+    padding: 26px 34px ;
+    border-radius: 0.5px 0.5px 3px 3px;
+    border: 1px solid #021BFF;
+    box-shadow: 0px 3px 0px 0px #021BFF;
+}
+.subscribe-Info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+}
+.subscribe-Info-text h2{
+    color: #1B1C1E;
+    font-size: 40px;
+}
+.subscribe-Info-text h3{
+    color: #1B1C1EB2;
+    font-size: 24px;
+}
+.subscribe-Info input{
+    border: 1px solid #808080;
+    padding: 18px 145px 18px 24px;
+    border-radius: 10px;
+}
+/* Responsive Subscribe  */
+@media (max-width:1024px) {
+    #subscribe_card img{
+        width: 200px;
+    }
+    #subscribe_card{
+        flex-direction: column;
+        gap: 10px;
+        height: fit-content;
+    }
+    .subscribe-Info{
+        gap: 30px;
+        height: 100%;
+    }
+}
+@media (max-width:760px) {
+    #subscribe{
+        padding: 15px 15px;
+    }
+    #subscribe_card img{
+        width: 150px;
+    }
+    .subscribe-Info-text h2{
+        font-size: 25px;
+    }
+    .subscribe-Info-text h3{
+        font-size: 14px;
+    }
+}
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++  */
+/* footer section  */
+footer{
+    min-height: 510px;
+    width: 100%;
+    padding: 40px 0px 40px 0px;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+}
+#upper_footer{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 368px;
+    background-color: #000F9A;
+    padding: 56px 100px 56px 100px;
+}
+#upper_footer h2{
+    color: #06AC8B;
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 13px;
+}
+#upper_footer ul li{
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27.24px;
+    padding-left: 15px;
+    list-style: none;
+}
+#course_connect{
+    /* background-color: red; */
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#course_connect h1{
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 600;
+    font-family: 'gilroy';
 
+}
+.social-img{
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+    align-items: center;
+}
+.social-img img{
+    width: 50px;
+    border: 3.5px solid white;
+    border-radius: 50%;
+    padding: 6px;
+}
+#lower_footer p{
+    color: #1B1C1E;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    /* background-color: palegoldenrod; */
+}
+/* Responsive footer  */
+@media (max-width:1024px) {
+    footer{
+        padding: 40px 0px 40px 0px;
+    }
+    #upper_footer{
+        gap: 20px;
+        flex-wrap: wrap;
+        padding: 56px 15px 56px 15px;
+    }
+}
+@media (max-width:768px) {
+    #upper_footer{
+        column-gap: 100px;
+        margin-bottom: 20px;
+    }
+    #upper_footer h2{
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+    #upper_footer ul li{
+        font-size: 16px;
+    }
+    #course_connect{
+        min-height: 130px;
+    }
+    #course_connect h1{
+        color: #ffffff;
+        font-size: 32px;
+    
+    }
+    .social-img{
+        display: flex;
+        justify-content: start;
+        gap: 20px;
+        align-items: center;
+    }
+    .social-img img{
+        width: 50px;
+        border: 3.5px solid white;
+        border-radius: 50%;
+        padding: 6px;
+    }
+    #lower_footer p{
+        color: #1B1C1E;
+        font-size: 18px;
+        font-weight: 400;
+        text-align: center;
+        /* background-color: palegoldenrod; */
+    }
+}
