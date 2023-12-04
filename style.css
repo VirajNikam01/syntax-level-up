@@ -56,8 +56,14 @@
 @media (max-width:490px) {
     #title h2{
         padding-bottom: 4px;
-        font-size: 26px;
+        font-size: 21px;
         font-weight: 600;
+    }
+}
+@media (max-width:425px) {
+    .resbtn{
+        margin-top: 12px;
+        font-size: 12px;
     }
 }
 *{
@@ -90,6 +96,10 @@ nav{
     justify-content: space-between;
     align-items: center;
     padding: 15px 100px 15px 100px;
+}
+#frame161{
+    width: 147px;
+    height: 68px;
 }
 #frame163{
     display: flex;
@@ -200,6 +210,18 @@ nav{
     }
     .active .fa-xmark{
         display: block;
+    }
+}
+@media (max-width:425px) {
+    #frame161{
+        width: 120px;
+        /* height: 68px; */
+    }
+    .fa-bars{
+        font-size: 25px;
+    }
+    .fa-xmark{
+        font-size: 35px;
     }
 }
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++  */
@@ -341,21 +363,21 @@ header{
     #html{
         width: 40px;
         position: absolute;
-        top: 20px;
-        left: -18px;
+        top: 50px;
+        left: -78px;
     }
     #idea{
         width: 50px;
         position: absolute;
-        top: 20px;
-        right: -10px;
+        top: 87px;
+        left: -85%;
     }
 
     #mortarboard{
-        width: 50px;
+        width: 60px;
         position: absolute;
-        bottom: 0;
-        left: -15%;
+        bottom: 4%;
+        left: -49%;
     }
 }
 
@@ -515,6 +537,38 @@ header{
         padding: 38px 15px ;
     }
 }
+@media (max-width:768px) {
+    #courseCard{
+        height: fit-content;
+        width:fit-content;
+    }
+    #courseCard>img{
+        width: 240px;
+    }
+    #Course-details h3{
+        font-size: 17px;
+        line-height: 1;
+    }
+    #Course-details p{
+        font-size: 13px;
+    }
+    #Course-addon{
+        margin-top: 10px;
+    }
+    .course_duration{
+        gap: 5px;
+    }
+    .course_duration img{
+        width: 19px;
+    }
+    .course_duration span{
+        font-size: 14px;
+    }
+    .read_more{
+        font-size: 14px;
+    }
+}
+
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++  */
 #company{
     display: flex;
@@ -658,21 +712,26 @@ header{
     }
 }
 @media (max-width:425px) {
+    #review{
+        padding: 40px 15px 10px 15px;
+    }
     #review_card{
-        padding: 20px 20px;
-        margin-block: 30px;
+        padding: 10px 20px;
+        margin-top: 10px;
+        margin-bottom: 30px;
         border: 3px solid #021BFF;
         border-radius: 9px;
         height: fit-content;
+        width: 80%;
     }
     #review_card .card_top{
         gap: 10px;
     }
     #review_card .card_top h2{
-        font-size: 22px;
+        font-size: 20px;
     }
     #review_card .card_top h5{
-        font-size: 13px;
+        font-size: 10px;
     }
     #review_card .card_top img{
         width: 80px;
@@ -838,19 +897,35 @@ header{
         height: fit-content;
     }
 }
-@media (max-width:425px) {
+@media (max-width:475px) {
     #blogContent{
        padding-top: 20px;
     }
     #card2Blog{
         margin-block: 10px;
+        align-items: center;
     }
     #card2Blog img{
-        height: 50%;
-        width: 100%;
+        width: 60%;
     }
     #blogTitle{
         padding-block: 10px;
+    }
+    #blogTitle #text{
+        font-size: 13px;
+    }
+    #blogTitle #date{
+        font-size: 13px;
+    }
+    #blogDescription h2{
+        margin-top: 9px;
+        font-size: 18px;
+    }
+    #blogDescription p{
+        font-size: 12px;
+    }
+    #blogTitle h3{
+        font-size: 14px;
     }
     #wrapper{
         flex-direction: column;
@@ -916,7 +991,14 @@ header{
 }
 @media (max-width:425px) {
     #countIteam{
-        width: 100%;
+        width: 85%;
+        height: 100px;
+    }
+    #countIteam h2{
+        font-size: 20px;
+    }
+    #countIteam p{
+        font-size: 15px;
     }
 }
 /* ++++++++++++++++++++++++++++++++++++++++++  */
@@ -999,21 +1081,21 @@ input::placeholder{
         height:fit-content;
     }
     #center p{
-        font-size: 18px;
-        padding-block: 20px;
+        font-size: 15px;
+        padding-block: 12px;
     }
     #bottom{
         padding-left: 20px;
     }
     #bottom li{
         padding-block: 4px;
-        font-size: 18px;
+        font-size: 15px;
     }
     #top h1{
-        font-size: 28px;
+        font-size: 24px;
     }
     #top h2{
-        font-size: 20px;
+        font-size: 18px;
     }
     #Contact-form{
         align-items: start;
@@ -1029,10 +1111,7 @@ input::placeholder{
         font-size: 14px;
     }
     .form-field label{
-        font-size: 18px;
-    }
-    .formbtn{
-        margin-top: 18px;
+        font-size: 15px;
     }
 }
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++  */
@@ -1106,10 +1185,14 @@ input::placeholder{
 }
 @media (max-width:390px) {
     #subscribe{
-        padding: 0px 15px 15px 15px;
+        min-height: 370px;
+        padding: 0px 15px 0px 15px;
     }
     #subscribe_card img{
         width: 130px;
+    }
+    #subscribe_card{
+        padding: 25px 12px ;
     }
     .subscribe-Info-text h2{
         font-size: 20px;
@@ -1229,6 +1312,31 @@ footer{
     }
     #lower_footer p{
         font-size: 13px;
+    }
+}
+@media (max-width:425px) {
+    #upper_footer h2{
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+    #upper_footer ul li{
+        font-size: 15px;
+    }
+    #course_connect{
+        min-height: 130px;
+    }
+    #course_connect h1{
+        color: #ffffff;
+        font-size: 29px;
+    
+    }
+    .social-img img{
+        width: 42px;
+        padding: 3px;
+    }
+    #lower_footer p{
+        font-size: 13px;
+        font-family: sans-serif;
     }
 }
 
