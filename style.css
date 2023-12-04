@@ -1054,6 +1054,24 @@ input::placeholder{
         font-size: 14px;
     }
 }
+@media (max-width:390px) {
+    #subscribe{
+        padding: 0px 15px 15px 15px;
+    }
+    #subscribe_card img{
+        width: 130px;
+    }
+    .subscribe-Info-text h2{
+        font-size: 20px;
+    }
+    .subscribe-Info-text h3{
+        font-size: 13px;
+    }
+    .subscribe-Info input{
+        padding: 5px 10px 5px 10px;
+        border-radius: 5px;
+    }
+}
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++  */
 /* footer section  */
 footer{
